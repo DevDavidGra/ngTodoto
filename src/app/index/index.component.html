@@ -1,3 +1,24 @@
-<p>
-  index works!
-</p>
+<mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="start-between center">
+  <span>AngularTodo</span>
+  <span fxFlex="1 1 auto"></span>
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+</mat-toolbar>
+
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item routerLink="/">
+    <mat-icon>dialpad</mat-icon>
+    <span>Home</span>
+  </button>
+  <button mat-menu-item routerLink="/jquery">
+    <mat-icon>voicemail</mat-icon>
+    <span>Jquery</span>
+  </button>
+  <button mat-menu-item routerLink="/angular">
+    <mat-icon>notifications_off</mat-icon>
+    <span>Angular</span>
+  </button>
+</mat-menu>
+<router-outlet></router-outlet>
